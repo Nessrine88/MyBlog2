@@ -3,6 +3,9 @@ class User < ApplicationRecord
   has_many :comments
   has_many :likes
 
+  validates :name, :photo, :bio, presence: true
+  validates :posts_counter, numericality: { greater_than_or_equal_to: 0 }
+
   after_initialize :set_defaults
 
   def set_defaults
