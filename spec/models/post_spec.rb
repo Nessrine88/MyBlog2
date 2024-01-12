@@ -39,7 +39,6 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
-
   it 'returns five recent comments' do
     post = create(:post)
     create_list(:comment, 6, post:)
