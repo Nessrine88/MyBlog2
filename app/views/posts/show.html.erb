@@ -1,1 +1,14 @@
-<h1>Here is a specific post for a given user</h1>
+<%= render partial: 'partials/post', locals: { user: @user, post: @post } %>
+   
+<div class="container">
+<% if @post.comments.present? %>
+  <% @post.comments.each do |comment| %>
+    <strong>
+      <%= comment.user.name %>:
+    </strong>
+    <%= comment.text %> <br>
+  <% end %>
+<% else %>
+  <p>No comments for this post</p>
+<% end %>
+</div>

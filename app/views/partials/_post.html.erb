@@ -1,0 +1,11 @@
+<div class="container dis">
+  <div class="post">
+    <%= link_to post.title, user_post_path(@user, post)%><br>
+    <%= post.text %><br>
+  </div>
+
+  <div class="counters">
+    Comments: <%= post.comments_counter %>,
+    Likes: <%= post.likes_counter %>
+  </div>
+</div>
