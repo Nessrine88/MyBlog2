@@ -1,0 +1,34 @@
+.form-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vh;
+}
+
+.form-input {
+  width: auto;
+  padding: 0.5rem;
+}
+
+.submit-button {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0.2px solid;
+}
+
+.form {
+  padding: 2rem;
+  height: 50vh;
+  width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 7%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}

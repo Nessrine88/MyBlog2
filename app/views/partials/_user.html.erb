@@ -9,7 +9,11 @@
         <h1><%= link_to user.name, user_path(user) %></h1>
     </div>
     <div class="post_counter">
-        <p> Number of posts:<%= user.posts_counter %></p>
+        <p> Number of posts:<%= user.posts_counter %>
+        <%= link_to" + ", new_user_post_path(@current_user), class: "add_post" %>
+        </p>
+  
+
     </div>
 </div>
 </div>
