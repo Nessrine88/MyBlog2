@@ -14,6 +14,7 @@
   align-items: last baseline;
   width: 100%;
   border: solid 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 2rem;
   height: 50%;
 }
@@ -23,6 +24,7 @@
   height: 9rem;
   margin-right: 1rem;
   border: 1px solid;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .img img {
@@ -33,6 +35,7 @@
 
 .container {
   border: solid 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   width: auto;
   margin: 2rem;
   padding: 2rem;
@@ -54,8 +57,33 @@
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn a {
   text-decoration: none;
+}
+
+.add_post {
+  border: 1px solid;
+  padding: 0 0.2rem;
+  border-radius: 20%;
+}
+
+.like_comment {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like_comment button {
+  background-color: transparent;
+  padding: 0 1rem;
+  border: 0.2px solid;
+}
+
+body > div.like_comment > form:nth-child(1) > input[type=submit]:nth-child(3) {
+  background-color: transparent;
+  border: 0.2px solid;
+  padding: 0.8px 2px;
 }

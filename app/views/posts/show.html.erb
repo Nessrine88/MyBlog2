@@ -1,5 +1,16 @@
 <%= render partial: 'partials/post', locals: { user: @user, post: @post } %>
-   
-<div class="container">
-  <%= raw(display_comments(post, post.comments).join("\n")) %>
+
+<div class="like_comment">
+<%= form_with model: Comment.new, url: user_post_comments_path(@user, @post) do |form| %>
+  <%= form.text_field :text, placeholder: 'Make a comment' %>
+  <%= form.submit "Comment" %>
+<% end %>
+<%= button_to "Like", user_post_likes_path(@user, @post), remote: true %>
+
 </div>
+
+<div class="container">
+  <%= raw(display_comments(@post, @post.comments).join("\n")) %>
+</div>
+
+

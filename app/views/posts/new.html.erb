@@ -1,0 +1,17 @@
+<div class="form">
+
+<%= form_with model: [@current_user, Post.new], html: { class: 'my-form' } do |form| %>
+    <h2>New Post</h2>
+  <div class="form-container">
+    <%= form.label :title, 'Title:' %> <br>
+    <%= form.text_field :title, placeholder: 'Enter a title (10 to 250 characters)', class: 'form-input' %>
+  </div>
+
+  <div class="form-container">
+    <%= form.label :text, 'Subject:' %> <br>
+    <%= form.text_area :text, placeholder: 'Subject', class: 'form-input' %>
+  </div>
+
+  <%= form.submit "Submit", class: 'submit-button' %>
+<% end %>
+</div>

@@ -2,10 +2,8 @@
 
 <% @posts.each do |post| %>
   <%= render partial: 'partials/post', locals: { user: @user, post: post } %>
- 
   <div class="container">
   <%= raw(display_comments(post, post.comments).join("\n")) %>
 </div>
-
 
 <% end %>
