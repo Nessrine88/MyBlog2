@@ -28,5 +28,4 @@ RSpec.describe 'Users', type: :request do
     get user_path(@user)
     expect(response).to render_template(:show)
   end
-
 end
