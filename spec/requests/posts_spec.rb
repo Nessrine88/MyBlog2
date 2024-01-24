@@ -5,7 +5,6 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 end
 
-
 RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
