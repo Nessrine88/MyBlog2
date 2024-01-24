@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   include PostsHelper
 
   def index
+    @posts = Post.order(:created_at).page params[:page]
     @user = User.includes(posts: :comments).find(params[:user_id])
-    @posts = @user.posts
     @comments = Comment.where(post_id: @posts.pluck(:id))
   end
 

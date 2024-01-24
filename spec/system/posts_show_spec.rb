@@ -16,6 +16,11 @@ RSpec.describe 'Test the Post show page', type: :system do
     expect(page).to have_content(post.title)
   end
 
+  it 'displays the author of the post' do
+    visit user_post_path(user, post)
+    expect(page).to have_content(post.author.name)
+  end
+
   it 'displays the number of comments' do
     visit user_post_path(user, post)
     expect(page).to have_content(post.comments.count)

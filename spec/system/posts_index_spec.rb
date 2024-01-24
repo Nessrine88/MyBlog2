@@ -59,6 +59,12 @@ RSpec.describe 'Test the User show page', type: :system do
     end
   end
 
+  it 'displays pagination section when there are more posts than fit on the view' do
+    visit user_posts_path(user)
+    expect(page).to have_content(posts.first.title)
+    expect(page).to have_css('.pagination')
+  end
+
   it 'it redirects me to that post\'s show page.When I click post' do
     visit user_posts_path(user)
     click_on posts.first.title

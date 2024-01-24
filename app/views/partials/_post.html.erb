@@ -2,6 +2,7 @@
   <div class="post">
     <%= link_to post.title, user_post_path(@user, post)%><br>
     <%= post.text %><br>
+   written by : <%= post.author.name %><br>
   </div>
 
   <div class="counters">
