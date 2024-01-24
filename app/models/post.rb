@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  paginates_per 10
   belongs_to :author, class_name: 'User'
   has_many :comments
   has_many :likes
