@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 require 'rails_helper'
 require 'factory_bot_rails'
 
-=======
->>>>>>> 7755deb18732be55df2a1d22817ebfa7e5dca26a
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 end
@@ -21,11 +18,7 @@ RSpec.describe 'Test the User show page', type: :system do
 
   it 'displays picture of the user' do
     visit user_posts_path(user)
-<<<<<<< HEAD
     expect(page).to have_css("img[src*='#{user.photo}']")
-=======
-    expect(page).to have_css("img[src*='#\{user.photo}']")
->>>>>>> 7755deb18732be55df2a1d22817ebfa7e5dca26a
   end
 
   it 'displays the number of posts the user has written' do
