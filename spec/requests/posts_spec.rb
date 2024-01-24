@@ -36,5 +36,4 @@ RSpec.describe 'Posts', type: :request do
     get user_post_path(@user, @post)
     expect(response).to render_template(:show)
   end
-
 end
