@@ -1,3 +1,6 @@
+<div class="logout-link">
+<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+</div>
 <% @users.each do |user| %>
   <%= render partial: 'partials/user', locals: { user: user } %>
 <% end %>

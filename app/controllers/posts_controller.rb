@@ -14,13 +14,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = @current_user.posts.new
+    @user = User.find(params[:user_id])
+    @post = @user.posts.new
   end
 
   def create
-    @post = @current_user.posts.new(post_params)
+    @user = User.find(params[:user_id])
+    @post = @user.posts.new(post_params)
     if @post.save
-      redirect_to user_posts_path(@current_user), notice: 'Post was successfully created'
+      redirect_to user_posts_path(@user), notice: 'Post was successfully created'
     else
 
       flash.now[:alert] = 'Error: Post could not be created'

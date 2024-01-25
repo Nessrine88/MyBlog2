@@ -1,6 +1,6 @@
 <div class="form">
 
-<%= form_with model: [@current_user, Post.new], html: { class: 'my-form' } do |form| %>
+<%= form_with model: [@user, Post.new], html: { class: 'my-form' } do |form| %>
     <h2>New Post</h2>
   <div class="form-container">
     <%= form.label :title, 'Title:' %> <br>
