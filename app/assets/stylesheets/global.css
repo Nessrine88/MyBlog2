@@ -14,7 +14,6 @@
   align-items: last baseline;
   width: 100%;
   border: solid 1px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 2rem;
   height: 50%;
 }
@@ -35,7 +34,6 @@
 
 .container {
   border: solid 1px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   width: auto;
   margin: 2rem;
   padding: 2rem;
@@ -86,4 +84,15 @@ body > div.like_comment > form:nth-child(1) > input[type=submit]:nth-child(3) {
   background-color: transparent;
   border: 0.2px solid;
   padding: 0.8px 2px;
+}
+
+.flash {
+  background-color: #69da6f;
+  color: white;
+  display: flex;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  
 }
